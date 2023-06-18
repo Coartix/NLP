@@ -30,13 +30,16 @@
    Some tweets may present challenges in determining hate speech. Examples of ambiguous cases include:
    
    - Tweets that use sarcasm or irony, making it unclear whether they are promoting hate or not.
-   - Tweets that require additional context or background information to understand their intent.
-   - Tweets that involve complex language, cultural references, or slang that may be open to interpretation.
+   example : "@user @user you son of a bitch i'm in" -> here they are surely joking between friends and not insulting each other
 
-   When encountering such cases, follow these guidelines:
-   
-   - If the tweet's intent is unclear or the hate speech is not evident, label it as `undefined`
-   - Document ambiguous cases with brief explanations for analysis and possible future improvements.
+   - Tweets that require additional context or background information to understand their intent.
+   example : "@user here you should die lol" -> may be about a video game 
+
+   - Tweets that involve complex language, cultural references, or slang that may be open to interpretation.
+   example : "@user presta atención al personaje negro" -> here negro means the color black in spanish
+
+   When encountering such cases, label it as `undefined`
+
 
 7. **False Positives:**  
    While it is crucial to identify hate speech accurately, false positives (labeling a non-hate tweet as hate) should be minimized. Pay attention to the specific context, cultural references, and potential misinterpretations to avoid mislabeling tweets.
@@ -47,3 +50,10 @@
 9. **Neutrality:**  
    Maintain a neutral and objective approach during the annotation process. Do not let personal opinions or biases influence the labeling decision.
 
+10. **Grasping Twitter Context:**
+
+   Twitter has unique context markers which are essential for tweet interpretation:
+
+   - **@user:** "Mentions" tag users in tweets, often to direct conversation. Unfortunatly with our database it is anonymous.
+
+   - **#keyword:** "Hashtags" denote topics or keywords in tweets, typically linked to broader conversations or trends. Recognizing the connotation of a hashtag may assist in determining if a tweet represents hate speech.
